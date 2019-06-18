@@ -1,0 +1,26 @@
+// HTML
+
+<input type="checkbox" id="checkbox">
+<label for="checkbox"></label>
+
+
+// CSS
+input[type="checkbox"] + label:before{
+    content: '\a0';  //不换行空格
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 1px solid #343A46;
+    line-height: 1;
+}
+input[type="checkbox"]:checked + label:before{
+    content: "\2713";
+    color: #fff;
+    vertical-align: top;
+}
+// 设置input框消失
+input{
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
