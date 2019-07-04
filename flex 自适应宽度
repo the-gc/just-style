@@ -1,0 +1,33 @@
+// 效果需求  当使用flex：1 来自适应宽度布局时 缩小时想要使得文字溢出部分出...
+
+// css
+.main{
+    display: flex;
+}
+.left{
+    width: 200px;
+    min-width: 200px;
+}
+.right{
+    width: 200px;
+    min-width: 200px;
+}
+.auto{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+.auto p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// html
+<div class="main">
+    <div class="left"></div>
+    <div class="auto">
+        <p>我是自适应的部分</p>
+    </div>
+    <div class="right"></div>
+</div>
